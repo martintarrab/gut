@@ -1,0 +1,35 @@
+@import "./mediaQueries.scss";
+
+@mixin backgroundImage($image, $ext: png) {
+  $path: "../../static/img/";
+
+  background-image: url("#{$path}#{$image}.#{$ext}");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include for-size(phone) {
+    background-image: url("#{$path}#{$image}-ml.#{$ext}");
+  }
+
+  @include for-size(phone, up, true) {
+    background-image: url("#{$path}#{$image}-t.#{$ext}");
+  }
+
+  @include for-size(tablet) {
+    background-image: url("#{$path}#{$image}-t.#{$ext}");
+  }
+
+  @include for-size(phone-sm, down, true) {
+    background-image: url("#{$path}#{$image}-ml.#{$ext}");
+  }
+
+  @include for-size(tablet-lg) {
+    background-image: url("#{$path}#{$image}-d.#{$ext}");
+  }
+
+  @include for-size(desktop-lg) {
+    background-image: url("#{$path}#{$image}-dl.#{$ext}");
+  }
+}
+
+// @include backgroundImage(fileName, jpg);

@@ -1,0 +1,110 @@
+@import '~normalize.css'; /* bring in normalize.css styles */
+@import 'src/utils/scss/index';
+
+@import '../components/Layout/layout';
+@import '../components/Header/header';
+@import '../components/Footer/footer';
+
+@import './pages/error-404.scss';
+
+@import '../components/Quote/quote.module';
+@import '../components/HeroDetail/heroDetail.module';
+@import '../components/OneImageLayout/oneImageLayout.module';
+@import '../components/TwoImageLayout/twoImageLayout.module';
+@import '../components/ThreeImageLayout/threeImageLayout.module';
+@import '../components/People/people.module';
+@import '../components/Text/text.module';
+@import '../components/Tab/tab.module';
+@import '../components/ClientHero/clientHero.module';
+@import '../components/ClientGrid/clientGrid.module';
+@import '../components/HomeSlide/homeSlide.module';
+@import '../components/HeroImage/heroImage.module';
+@import '../components/HeroVideo/heroVideo.module';
+@import '../components/HeroQuote/heroQuote.module';
+@import '../components/HeroMeet/heroMeet.module';
+@import '../components/HeroCulture/heroCulture.module';
+@import '../components/Office/office.module';
+@import '../components/Team/team.module';
+@import '../components/Member/member.module';
+@import '../components//HeroAbout/heroAbout.module';
+@import '../components/Initiative/initiative.module';
+@import '../components/HeroLegal/heroLegal.module';
+@import '../components//HeroContact/heroContact.module';
+@import '../components/Careers/careers.module';
+@import '../components//XRay/xray.module';
+@import '../components/Press/press.module';
+@import '../components/Menu/menu.module';
+
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: $black;
+  color:white;
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $primary-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global {
+  .full-height {
+    height: 100% !important;
+  }
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  > div {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+// * {
+//   // Touch Highlights
+//   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+//   -webkit-tap-highlight-color: transparent;  // i.e. Nexus5/Chrome and Kindle Fire HD 7''
+// }

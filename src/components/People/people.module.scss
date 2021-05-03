@@ -1,0 +1,121 @@
+.people {
+  padding: 30px 24px 100px;
+
+  @include for-size('tablet') {
+    padding: 65px 52px 132px;
+  }
+
+  @include for-size('tablet-lg') {
+    padding: 65px 40px 142px;
+  }
+
+  @include for-size('desktop') {
+    padding: 90px 60px 190px;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &-image {
+      left: 0;
+      position: absolute;
+      top: 0;
+
+      @include for-size('tablet') {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      img {
+        opacity: .8;
+        width: calc(50vw + 40px);
+
+        @include for-size('tablet') {
+          width: 237px;
+        }
+
+        @include for-size('tablet-lg') {
+          width: 355px;
+        }
+
+        @include for-size('desktop') {
+          width: 430px;
+        }
+      }
+    }
+
+    &-text {
+      padding: 232px 20px 0;
+      position: relative;
+      text-align: center;
+
+      @include for-size('tablet-lg') {
+        padding: 460px 60px 0;
+      }
+
+      @include for-size('desktop') {
+        max-width: 980px;
+        padding: 565px 120px 0;
+      }
+
+      p {
+        font-size: 50px;
+        letter-spacing: -3px;
+        line-height: 47px;
+        margin: 0;
+        text-transform: uppercase;
+
+        @include for-size('tablet') {
+          font-size: 60px;
+          line-height: 55px;
+        }
+
+        @include for-size('tablet-lg') {
+          font-size: 70px;
+          line-height: 65px;
+        }
+
+        @include for-size('desktop') {
+          font-size: 80px;
+          line-height: 75px;
+        }
+
+        b {
+          position: relative;
+
+          &:before {
+            background: url('/assets/images/o.svg') center center no-repeat;
+            content: '';
+            display: inline-block;
+            height: 52px;
+            left: -5px;
+            position: absolute;
+            top: 4px;
+            width: 50px;
+
+            @include for-size('tablet') {
+              background-size: contain;
+              height: 61px;
+              top: 6px;
+              width: 59px;
+            }
+
+            @include for-size('tablet-lg') {
+              height: 73px;
+              left: -7px;
+              top: 7px;
+              width: 70px;
+            }
+
+            @include for-size('desktop') {
+              height: 83px;
+              left: -7px;
+              top: 8px;
+              width: 79px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

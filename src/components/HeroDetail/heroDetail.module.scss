@@ -1,0 +1,375 @@
+.hero-detail {
+  &__header {
+    padding: 0 24px;
+
+    @include for-size('tablet') {
+      padding: 0 52px;
+    }
+
+    @include for-size('tablet-lg') {
+      padding: 0 40px;
+    }
+
+    @include for-size('desktop') {
+      padding: 0 60px;
+    }
+
+    &-wrapper {
+      border-top: 1px solid #fff3;
+      padding: 44px 0 20px;
+
+      @include for-size('tablet') {
+        padding: 35px 0 20px;
+      }
+
+      @include for-size('tablet-lg') {
+        padding: 45px 0 20px;
+      }
+    }
+
+    &-back {
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid $white;
+      color: $white;
+      display: none;
+      font-size: 16px;
+      padding: 2px 8px 3px;
+      text-transform: uppercase;
+
+      @include for-size('tablet') {
+        display: inline-flex;
+      }
+
+      svg {
+        margin-right: 6px;
+      }
+    }
+
+    &-title {
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: -3px;
+      margin: 0;
+
+      @include for-size('tablet') {
+        font-size: 60px;
+        line-height: 62px;
+        padding-top: 22px;
+      }
+
+      @include for-size('tablet-lg') {
+        font-size: 70px;
+        line-height: 72px;
+        padding-top: 35px;
+      }
+
+      @include for-size('desktop') {
+        font-size: 80px;
+        line-height: 82px;
+      }
+    }
+  }
+
+  &__image {
+    .lg {
+      display: none;
+
+      @include for-size('tablet') {
+        display: block;
+      }
+    }
+
+    .sm {
+      @include for-size('tablet') {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__video {
+    position: relative;
+
+    &-image {
+      position: relative;
+      cursor: pointer;
+
+      .lg {
+        display: none;
+
+        @include for-size('tablet') {
+          display: block;
+        }
+      }
+
+      .sm {
+        @include for-size('tablet') {
+          display: none;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      &-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &-image {
+          grid-column: 2 / 3;
+
+          img {
+            width: 42px;
+
+            @include for-size('tablet') {
+              width: 63px;
+            }
+          }
+        }
+
+        &-text {
+          grid-row: 2;
+          grid-column: 1 / 2;
+
+          span {
+            padding-top: 5px;
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: right;
+            display: inline-block;
+
+            @include for-size('desktop') {
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &-player {
+      display: none;
+
+      video {
+        &:focus {
+          outline: 0 none;
+        }
+      }
+    }
+
+    &--show {
+      .hero-detail__video-image {
+        display: none;
+      }
+
+      .hero-detail__video-player {
+        display: block;
+      }
+    }
+  }
+
+  &__data {
+    display: grid;
+    grid-template-areas: "title title" "description description" "link tags" ". brands";
+    grid-template-columns: repeat(2, 1fr);
+    padding: 54px 24px 30px;
+
+    @include for-size('tablet') {
+      grid-column-gap: 15px;
+      grid-template-areas: ". title title title title title title title" "link link description description description description description description" ". . tags tags . brands brands brands";
+      grid-template-columns: repeat(8, 1fr);
+      padding: 68px 52px 60px;
+    }
+
+    @include for-size('tablet-lg') {
+      grid-template-areas: ". title title title title title title title title title title title" "link link description description description description description description . tags tags tags" ". . . . . . . . . brands brands brands";
+      grid-template-columns: repeat(12, 1fr);
+      padding: 80px 40px;
+    }
+
+    @include for-size('desktop') {
+      grid-template-areas: ". title title title title title title title title title title title" "link link description description description description description . . tags tags tags" ". . . . . . . . . brands brands brands";
+      padding: 100px 60px;
+    }
+
+    &-title {
+      grid-area: title;
+      padding-bottom: 40px;
+
+      @include for-size('tablet') {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-template-columns: repeat(7, 1fr);
+        padding-bottom: 60px;
+      }
+
+      @include for-size('tablet-lg') {
+        grid-template-columns: repeat(11, 1fr);
+        padding-bottom: 80px;
+      }
+
+      @include for-size('desktop') {
+        padding-bottom: 50px;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: -2px;
+        line-height: 32px;
+        margin: 0;
+        text-transform: uppercase;
+
+        @include for-size('tablet') {
+          font-size: 60px;
+          grid-column: 1 / 8;
+          line-height: 62px;
+          letter-spacing: -3px;
+        }
+
+        @include for-size('tablet-lg') {
+          font-size: 70px;
+          grid-column: 1 / 12;
+          line-height: 72px;
+        }
+
+        @include for-size('desktop') {
+          font-size: 80px;
+          line-height: 82px;
+        }
+      }
+
+      h2 + h2 {
+        padding: 5px 0 0 30px;
+
+        @include for-size('tablet') {
+          grid-column: 2 / 8;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &-description {
+      grid-area: description;
+      padding-bottom: 60px;
+
+      @include for-size('tablet') {
+        padding-bottom: 50px;
+      }
+
+      @include for-size('tablet-lg') {
+        padding-bottom: 0;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0;
+
+        @include for-size('tablet') {
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        @include for-size('tablet-lg') {
+          font-size: 20px;
+          line-height: 29px;
+          letter-spacing: -1px;
+        }
+
+        @include for-size('desktop') {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    &-link {
+      grid-area: link;
+
+      a {
+        color: $white;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        @include for-size('tablet-lg') {
+          font-size: 14px;
+        }
+
+        @include for-size('desktop') {
+          position: relative;
+          top: 8px;
+          border-radius: 3px;
+          border: 1px solid #fff;
+          padding: 2px 5px 3px;
+        }
+      }
+    }
+
+    &-tags {
+      grid-area: tags;
+
+      @include for-size('tablet-lg') {
+        padding-bottom: 50px;
+      }
+
+      span {
+        display: block;
+        font-size: 16px;
+        padding-bottom: 10px;
+
+        @include for-size('tablet') {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        @include for-size('desktop') {
+          font-size: 22px;
+          line-height: 30px;
+          padding-bottom: 2px;
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &-brands {
+      grid-area: brands;
+      padding-top: 50px;
+
+      @include for-size('tablet') {
+        padding-top: 5px;
+      }
+
+      h3 {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        margin: 0;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      img {
+        max-width: 150px;
+
+        @include for-size('tablet-lg') {
+          max-width: 170px;
+        }
+      }
+    }
+  }
+}

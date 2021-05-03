@@ -1,0 +1,95 @@
+.team {
+  padding: 0 24px;
+
+  @include for-size('tablet') {
+    padding: 0;
+  }
+
+  &__wrapper {
+    padding: 0 0 64px;
+
+    @include for-size('tablet') {
+      padding: 0 0 90px;
+    }
+
+    @include for-size('tablet-lg') {
+      padding: 0 0 100px;
+    }
+
+    @include for-size('desktop') {
+      padding: 0 0 140px;
+    }
+
+    &--space {
+      padding-top: 33px;
+
+      @include for-size('tablet') {
+        padding-top: 47px;
+      }
+
+      @include for-size('tablet-lg') {
+        padding-top: 84px;
+      }
+
+      @include for-size('desktop') {
+        padding-top: 75px;
+      }
+    }
+
+    &-title {
+      color: $white;
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: -2px;
+      line-height: 51px;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include for-size('tablet') {
+        font-size: 60px;
+        line-height: 62px;
+      }
+
+      @include for-size('tablet-lg') {
+        font-size: 70px;
+        letter-spacing: -3px;
+        line-height: 72px;
+      }
+
+      @include for-size('desktop') {
+        font-size: 80px;
+        letter-spacing: -5px;
+        line-height: 82px;
+      }
+    }
+
+    &-grid {
+      padding: 30px 0 0;
+
+      @include for-size('tablet') {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-row-gap: 65px;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px 52px 0;
+      }
+
+      @include for-size('tablet-lg') {
+        padding: 45px 40px 0;
+      }
+
+      @include for-size('desktop') {
+        padding: 55px 60px 0;
+      }
+    }
+  }
+
+  &--highlight {
+    .team__wrapper-grid {
+      @include for-size('tablet') {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.two-images {
+  display: grid;
+  grid-row-gap: 10px;
+  padding: 0 24px 15px;
+
+  @include for-size('tablet') {
+    grid-column-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 52px 15px;
+  }
+
+  @include for-size('tablet-lg') {
+    padding: 0 40px 15px;
+  }
+
+  @include for-size('desktop') {
+    padding: 0 60px 15px;
+  }
+
+  &__col {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &--space {
+    padding-bottom: 75px;
+
+    @include for-size('tablet') {
+      padding-bottom: 90px;
+    }
+
+    @include for-size('tablet-lg') {
+      padding-bottom: 120px;
+    }
+
+    @include for-size('desktop') {
+      padding-bottom: 135px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.three-images {
+  display: grid;
+  grid-row-gap: 10px;
+  padding: 0 24px 15px;
+
+  @include for-size('tablet') {
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-areas: "image1 image2" "image1 image3";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    padding: 0 52px 15px;
+  }
+
+  @include for-size('tablet-lg') {
+    grid-template-rows: repeat(2, 360px);
+    padding: 0 40px 15px;
+  }
+
+  @include for-size('desktop') {
+    grid-template-rows: repeat(2, 480px);
+    padding: 0 60px 15px;
+  }
+
+  &__col {
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+
+    &:nth-child(1) {
+      @include for-size('tablet') {
+        grid-area: image1;
+      }
+    }
+
+    &:nth-child(2) {
+      @include for-size('tablet') {
+        grid-area: image2;
+      }
+
+      img {
+        @include for-size('tablet') {
+          width: 100%;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      @include for-size('tablet') {
+        grid-area: image3;
+      }
+
+      img {
+        @include for-size('tablet') {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

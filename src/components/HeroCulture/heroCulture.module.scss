@@ -1,0 +1,161 @@
+.culture-hero {
+  padding-bottom: 55px;
+
+  @include for-size('tablet') {
+    padding-bottom: 90px;
+  }
+
+  @include for-size('tablet-lg') {
+    padding-bottom: 100px;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 8px 24px 60px;
+
+    @include for-size('tablet') {
+      border-top: 0 none;
+      display: grid;
+      grid-column-gap: 15px;
+      grid-template-columns: repeat(8, 1fr);
+      padding: 0 52px 40px;
+    }
+
+    @include for-size('tablet-lg') {
+      grid-template-columns: repeat(12, 1fr);
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    @include for-size('desktop') {
+      padding: 10px 60px 50px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      content: '';
+      display: block;
+      width: calc(100% - 48px);
+      height: 1px;
+      background: #fff3;
+
+      @include for-size('tablet') {
+        display: none;
+      }
+    }
+  }
+
+  &__who {
+    @include for-size('tablet') {
+      border-top: 1px solid #fff3;
+      grid-column: 1 / 3;
+      padding-top: 5px;
+      position: relative;
+    }
+
+    @include for-size('tablet-lg') {
+      grid-column: 1 / 5;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0;
+      text-transform: uppercase;
+
+      @include for-size('tablet') {
+        font-size: 12px;
+        line-height: 15px;
+        width: 10ch;
+      }
+
+      @include for-size('tablet-lg') {
+        width: 100%;
+      }
+    }
+
+    svg {
+      display: none;
+
+      @include for-size('tablet') {
+        bottom: 0;
+        display: block;
+        left: 0;
+        position: absolute;
+      }
+    }
+  }
+
+  &__title {
+    padding: 40px 0 0;
+
+    @include for-size('tablet') {
+      grid-column: 3 / 9;
+      padding: 0;
+    }
+
+    @include for-size('tablet-lg') {
+      grid-column: 5 / 13;
+    }
+
+    h1 {
+      margin: 0;
+
+      span {
+        display: block;
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: -3px;
+        line-height: 52px;
+        text-transform: uppercase;
+
+        @include for-size('tablet') {
+          font-size: 60px;
+          line-height: 62px;
+        }
+
+        @include for-size('tablet-lg') {
+          font-size: 70px;
+          line-height: 72px;
+        }
+
+        @include for-size('desktop') {
+          font-size: 80px;
+          line-height: 82px;
+        }
+      }
+
+      span + span {
+        padding-left: 50px;
+
+        @include for-size('tablet') {
+          padding-left: 60px;
+        }
+
+        @include for-size('tablet-lg') {
+          padding-left: 70px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+
+      &.sm {
+        @include for-size('tablet') {
+          display: none;
+        }
+      }
+
+      &.lg {
+        display: none;
+
+        @include for-size('tablet') {
+          display: block;
+        }
+      }
+    }
+  }
+}

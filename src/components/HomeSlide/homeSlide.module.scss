@@ -1,0 +1,57 @@
+.home-slide {
+  height: 580px;
+  padding-bottom: 75px;
+
+  @include for-size('tablet') {
+    height: auto;
+    padding: 0 52px;
+    position: relative;
+  }
+
+  @include for-size('tablet-lg') {
+    min-height: calc(100vh - 239px);
+    padding: 0 40px;
+  }
+
+  @include for-size('desktop') {
+    min-height: calc(100vh - 191px);
+    padding: 0 60px;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
+    padding-bottom: 75px;
+
+    @include for-size('tablet') {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 5px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  cursor: pointer;
+
+  @include for-size('tablet') {
+    bottom: 15px;
+  }
+
+  &--left {
+    right: 80px;
+  }
+
+  &--right {
+    left: auto;
+    right: 24px;
+  }
+
+  &--disabled {
+    fill: rgba(255, 255, 255, 0.5);
+  }
+}
