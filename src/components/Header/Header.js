@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import Nav from 'components/Nav/Nav';
-import Clock from "components/Clock";
 import Menu from "components/Menu";
 
 const Header = ({ navMenus, locale, global }) => {
@@ -35,9 +34,6 @@ const Header = ({ navMenus, locale, global }) => {
                 <img src="/assets/images/lg-small.svg" alt="" className="sm" />
               </a>
             </Link>
-          </div>
-          <div className="hd__content-offices">
-            <Clock />
           </div>
           <Nav navMenus={navMenus} locale={locale} />
           <div className={`hd__content-hamb ${modalOpen ? 'hd__content-hamb--open' : ''}`}>

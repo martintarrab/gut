@@ -55,7 +55,9 @@ const Menu = ({ navMenus, locale, isModalOpen }) => {
           <div className="menu__wrapper__offices__list">
             <a className={currentOffice == 'ba' ? 'active' : ''} onClick={() => { setOffice('ba') }}><span>BA</span></a><span>/</span>
             <a className={currentOffice == 'sp' ? 'active' : ''} onClick={() => { setOffice('sp') }}><span>SP</span></a><span>/</span>
-            <a className={currentOffice == 'mia' ? 'active' : ''} onClick={() => { setOffice('mia') }}><span>MIA</span></a>
+            <a className={currentOffice == 'mia' ? 'active' : ''} onClick={() => { setOffice('mia') }}><span>MIA</span></a><span>/</span>
+            <a className={currentOffice == 'tor' ? 'active' : ''} onClick={() => { setOffice('tor') }}><span>TOR</span></a><span>/</span>
+            <a className={currentOffice == 'mx' ? 'active' : ''} onClick={() => { setOffice('mx') }}><span>MEX</span></a>
           </div>
         </div>
         {renderMenuItems(parsedMenuItems)}

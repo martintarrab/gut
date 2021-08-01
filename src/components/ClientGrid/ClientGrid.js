@@ -6,18 +6,20 @@ const ClientGrid = ({ officeClients, path }) => {
 
   return (
     <div className="client-grid">
-      { officeClients.map(client => {
-        articleNumber++;
-        articleNumber == 5 ? articleNumber = 1 : articleNumber;
+      <div className="client-grid__wrapper">
+        { officeClients.map(client => {
+          articleNumber++;
+          articleNumber == 5 ? articleNumber = 1 : articleNumber;
 
-        return (
-          <div className={'client-grid-article client-grid-article--' + articleNumber} key={client.fields.slug}>
-            <Link href={`/${path}/${client.fields.slug}`}>
-              <img src={extractMediaAssetSrc(client.fields.mainImageDesktop)} />
-            </Link>
-          </div>
-        )
-      })}
+          return (
+            <div className={'client-grid-article client-grid-article--' + articleNumber} key={client.fields.slug}>
+              <Link href={`/${path}/${client.fields.slug}`}>
+                <img src={extractMediaAssetSrc(client.fields.mainImageDesktop)} />
+              </Link>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

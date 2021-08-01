@@ -1,4 +1,4 @@
-.client-hero {
+.works-hero {
   padding: 0 24px;
 
   @include for-size('tablet') {
@@ -74,40 +74,55 @@
     }
   }
 
-  &-content {
-    padding: 90px 0 0;
+  &__title {
+    padding: 40px 0 0;
 
     @include for-size('tablet') {
-      grid-column: 1 / 9;
-      padding: 60px 0 0;
+      grid-column: 3 / 9;
+      padding: 0;
     }
 
     @include for-size('tablet-lg') {
-      grid-column: 2 / 12;
-      padding: 40px 0 0;
+      grid-column: 5 / 13;
     }
 
-    @include for-size('desktop') {
-      padding: 90px 0 0;
-    }
-
-    p {
+    h1 {
       margin: 0;
-      font-size: 28px;
-      line-height: 40px;
-      letter-spacing: -1px;
 
-      @include for-size('tablet-lg') {
-        font-size: 44px;
-        line-height: 50px;
+      span {
+        display: block;
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: -3px;
+        line-height: 52px;
+        text-transform: uppercase;
+
+        @include for-size('tablet') {
+          font-size: 60px;
+          line-height: 62px;
+        }
+
+        @include for-size('tablet-lg') {
+          font-size: 70px;
+          line-height: 72px;
+        }
+
+        @include for-size('desktop') {
+          font-size: 80px;
+          line-height: 82px;
+        }
       }
-    }
 
-    p + p {
-      padding-top: 20px;
+      span + span {
+        padding-left: 50px;
 
-      @include for-size('tablet') {
-        padding-top: 25px;
+        @include for-size('tablet') {
+          padding-left: 60px;
+        }
+
+        @include for-size('tablet-lg') {
+          padding-left: 70px;
+        }
       }
     }
   }

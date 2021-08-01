@@ -1,20 +1,29 @@
 .client-grid {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
 
   @include for-size('tablet') {
-    grid-gap: 0;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 290px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 50px 60px;
   }
 
   @include for-size('tablet-lg') {
-    grid-template-rows: 390px;
+    padding-bottom: 100px;
+    grid-template-columns: repeat(12, 1fr);
   }
 
-  @include for-size('desktop') {
-    grid-template-rows: 520px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include for-size('tablet') {
+      grid-column: 1 / 9;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include for-size('tablet-lg') {
+      grid-column: 2 / 12;
+    }
   }
 
   &-article {
@@ -22,126 +31,17 @@
     position: relative;
 
     @include for-size('tablet') {
-      height: 290px;
+      height: 200px;
       overflow: hidden;
     }
 
-    @include for-size('tablet-lg') {
-      height: 390px;
-    }
-
-    @include for-size('desktop') {
-      height: 520px;
-    }
-
-    &--1 {
-      @include for-size('tablet') {
-        grid-column: 1 / 6;
-      }
-
-      @include for-size('tablet') {
-        position: relative;
-      }
-
-      img {
-        width: 100%;
-
-        @include for-size('tablet') {
-          height: 120%;
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-          width: auto;
-        }
-      }
-    }
-
-    &--2 {
-      @include for-size('tablet') {
-        grid-column: 6 / 13;
-      }
-
-      img {
-        width: 100%;
-
-        @include for-size('tablet') {
-          position: relative;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          width: 120%;
-        }
-      }
-    }
-
-    &--3 {
-      @include for-size('tablet') {
-        grid-column: 1 / 8;
-      }
-
-      img {
-        width: 100%;
-
-        @include for-size('tablet') {
-          position: relative;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          width: 120%;
-        }
-      }
-    }
-
-    &--4 {
-      @include for-size('tablet') {
-        grid-column: 8 / 13;
-      }
-
-      @include for-size('tablet') {
-        position: relative;
-      }
-
-      img {
-        width: 100%;
-
-        @include for-size('tablet') {
-          height: 120%;
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-          width: auto;
-        }
-      }
+    img {
+      width: 100%;
     }
 
     a {
       display: block;
       cursor: pointer;
-    }
-
-    &-image {
-      img {
-        width: 100%;
-
-        @include for-size('tablet') {
-          object-fit: cover;
-        }
-
-        @include for-size('desktop') {
-          width: 100%;
-        }
-      }
-    }
-
-    &-lg {
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-
-      img {
-        max-width: 220px;
-      }
     }
   }
 }

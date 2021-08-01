@@ -145,12 +145,12 @@
         display: grid;
         grid-column-gap: 15px;
         grid-column: 5 / 9;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         width: 100%;
       }
 
       @include for-size('tablet-lg') {
-        grid-column: 9 / 13;
+        grid-column: 8 / 13;
       }
 
       &-list {

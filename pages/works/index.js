@@ -6,8 +6,8 @@ import { selectCurrentOffice } from "redux/app/selectors";
 import { getCopy } from "static/copy";
 
 import Layout from "components/Layout";
-import ClientHero from "components/ClientHero";
-import ClientGrid from "components/ClientGrid";
+import WorksHero from "components/WorksHero";
+import WorksGrid from "components/WorksGrid";
 import Seo from "components/Seo";
 
 const Works = ({ content, works, locale, navMenus, global, footer }) => {
@@ -37,8 +37,8 @@ const Works = ({ content, works, locale, navMenus, global, footer }) => {
     <>
       <Seo title={pageContent?.ogTitle} description={pageContent?.ogDescription} image={pageContent?.ogImage} />
       <Layout title={`Gut | ${localizedCopy.works}`} navMenus={navMenus} locale={locale} global={global} footer={footer}>
-        <ClientHero eyebrow={localizedCopy.worksEyebrow} title={localizedCopy.works} />
-        <ClientGrid officeClients={officeClients} path="works" />
+        <WorksHero eyebrow={localizedCopy.worksEyebrow} title={localizedCopy.works} />
+        <WorksGrid officeClients={officeClients} path="works" />
       </Layout>
     </>
   );
