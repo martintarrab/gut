@@ -38,14 +38,14 @@ const Portfolio = ({ content, clients, locale, navMenus, global, footer }) => {
       <Seo title={pageContent?.ogTitle} description={pageContent?.ogDescription} image={pageContent?.ogImage} />
       <Layout title={`GUT | ${localizedCopy.portfolio}`} navMenus={navMenus} locale={locale} global={global} footer={footer}>
         <ClientHero eyebrow={localizedCopy.portfolioEyebrow} title={localizedCopy.portfolio} />
-        <ClientGrid officeClients={officeClients} path="portfolio" />
+        <ClientGrid officeClients={officeClients} path="clients" />
       </Layout>
     </>
   );
 };
 
 export async function getStaticProps({ preview = false, locale }) {
-  const singlePageSlug = 'portfolio';
+  const singlePageSlug = 'clients';
   const content = await fetchContentByField(preview, 'singlePage', 'slug', singlePageSlug, locale);
   const clients = await getOfficeClients(preview, locale);
   const navMenus = await getNavMenus(preview, locale);

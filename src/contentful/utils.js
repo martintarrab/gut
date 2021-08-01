@@ -1,9 +1,8 @@
 export const filterContentsByOffice = (content, officeId) => {
   if (content && content.items) {
-    return content.items.map(entry => {
+    return content.items.filter(entry => {
       const offices = entry.fields.activeOffices.map(office => office.fields.id);
-      if (offices.includes(officeId)) return entry;
-      return entry;
+      return offices.includes(officeId);
     });
   } else {
     return null;
