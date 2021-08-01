@@ -12,7 +12,7 @@ const Culture = ({ content, locale, navMenus, global, footer }) => {
     if (!content) return;
     if (content.items.length === 0) {
       //page slug was not found
-      router.replace('/404');
+      router.push('/404');
       return;
     }
     setPageContent(content.items[0].fields);

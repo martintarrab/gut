@@ -15,12 +15,12 @@ const Client = ({ client, locale, navMenus, global, footer }) => {
     if (!client || !currentOffice) return;
     if (client.items.length === 0) {
       //Client slug was not found
-      router.replace('/404');
+      router.push('/404');
       return;
     }
     if (!isContentFromCurrentOffice(client.items[0].fields, currentOffice)) {
       // Client exists, but is not enabled for this office.
-      router.replace('/404');
+      router.push('/404');
       return;
     }
     const clientContent = client.items[0].fields;

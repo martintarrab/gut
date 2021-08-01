@@ -56,7 +56,7 @@ const Work = ({ content, works, locale, navMenus, global, footer, clients }) => 
         <div className="work-filter">
           <Filter options={getOptions()} onChange={handleFilterChange}/>
         </div>
-        <WorksGrid officeClients={getWorks()} path="works" />
+        <WorksGrid officeClients={getWorks()} path="work" />
       </Layout>
     </>
   );

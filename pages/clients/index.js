@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { fetchContentByField, getOfficeClients, getNavMenus, getGlobal, getFooter } from "contentful/api";
 import { filterContentsByOffice } from "contentful/utils";
@@ -11,6 +12,7 @@ import ClientGrid from "components/ClientGrid";
 import Seo from "components/Seo";
 
 const Portfolio = ({ content, clients, locale, navMenus, global, footer }) => {
+  const router = useRouter();
   const currentOffice = useSelector(selectCurrentOffice);
   const [officeClients, setOfficeClients] = useState([]);
   const [pageContent, setPageContent] = useState({});
@@ -20,7 +22,7 @@ const Portfolio = ({ content, clients, locale, navMenus, global, footer }) => {
     if (!content) return;
     if (content.items.length === 0) {
       //page slug was not found
-      router.replace('/404');
+      router.push('/404');
       return;
     }
     setPageContent(content.items[0].fields);
