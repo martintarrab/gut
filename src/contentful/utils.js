@@ -1,15 +1,10 @@
 export const filterContentsByOffice = (content, officeId) => {
   if (content && content.items) {
-    return content.items.map(c => {
-      if (!c.fields.activeOffices) {
-        // There's no active offices field. We can't filter.
-        return c;
-      }
-      const hasOffice = c.fields.activeOffices.filter(ao => ao.fields.id === officeId);
-      if (hasOffice.length > 0) {
-        return c;
-      }
-    }).filter(c => c);
+    return content.items.map(entry => {
+      const offices = entry.fields.activeOffices.map(office => office.fields.id);
+      if (offices.includes(officeId)) return entry;
+      return entry;
+    });
   } else {
     return null;
   }
