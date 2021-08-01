@@ -32,7 +32,7 @@ const HeroDetail = ({ content }) => {
     <section className="hero-detail">
       <div className="hero-detail__header">
         <div className="hero-detail__header-wrapper">
-          <Link href="/portfolio/">
+          <Link href="/works">
             <a className="hero-detail__header-back">{back} Works</a>
           </Link>
           <h1 className="hero-detail__header-title">{fields.title}</h1>
