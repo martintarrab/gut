@@ -55,7 +55,7 @@ const Nav = ({ navMenus, locale }) => {
   return (
     <div className="hd__content-nav">
       <div className="hd__content-nav-list" onMouseEnter={() => setShowItems(true)} onMouseLeave={() => setShowItems(false)}>
-        <div className="hd__content-nav-list-title"><a href="#">{localizedCopy.office}</a></div>
+        <div className="hd__content-nav-list-title"><a>{localizedCopy.office}</a></div>
         <div className={`hd__content-nav-list-item ${showItems ? 'hd__content-nav-list-item--show' : ''}`}>
           <a className={currentOffice == 'ba' ? 'active' : ''} onClick={() => { setOffice('ba') }}><span>{mapOffice['BA']}</span></a>
           <a className={currentOffice == 'sp' ? 'active' : ''} onClick={() => { setOffice('sp') }}><span>{mapOffice['SP']}</span></a>
