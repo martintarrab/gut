@@ -13,9 +13,7 @@ const ClientGrid = ({ officeClients, path }) => {
 
           return (
             <div className={'client-grid-article client-grid-article--' + articleNumber} key={client.fields.slug}>
-              <Link href={`/${path}/${client.fields.slug}`}>
-                <img src={extractMediaAssetSrc(client.fields.mainImageDesktop)} />
-              </Link>
+              <img src={extractMediaAssetSrc(client.fields.mainImageDesktop)} />
             </div>
           )
         })}

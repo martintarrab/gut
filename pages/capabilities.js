@@ -34,7 +34,7 @@ const GutAndBrains = ({ content, locale, navMenus, global, footer }) => {
 export default GutAndBrains;
 
 export const getStaticProps = async ({ preview = false, locale }) => {
-  const singlePageSlug = 'gut-and-brains';
+  const singlePageSlug = 'capabilities';
   const content = await fetchContentByField(preview, 'singlePage', 'slug', singlePageSlug, locale);
   const navMenus = await getNavMenus(preview, locale);
   const global = await getGlobal(preview, locale);
