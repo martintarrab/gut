@@ -1,157 +1,178 @@
 .offices {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+
+  @include for-size('tablet') {
     padding-top: 114px;
-    justify-content: center;
-    align-items: center;
+  }
 
-    .title {
-        display: none;
-        font-family: Inter;
-        font-size: 80px;
-        font-style: normal;
-        font-weight: normal;
-        letter-spacing: -0.07em;
-        line-height: 103.49%;
-        text-align: center;
-        text-transform: uppercase;
+  .title {
+    display: none;
+    font-family: Inter;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.07em;
+    line-height: 103%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 100px;
 
-        @include for-size('tablet') {
-            display: block;
-        }
+    @include for-size('tablet') {
+      display: block;
+      margin: 0;
     }
-    
-    .card {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-sizing: border-box;
-        display: flex;
-        filter: grayscale(100);
-        flex-direction: column;
-        padding: 0 53px 49px;
-        position: relative;
-        width: 321px;
+  }
 
-        @include for-size('tablet') {
-            height: 100%;
-            padding: 0 51px;
-            width: 589px;
-        }
-    
-        &::before {
-            background: $black;
-            content: '';
-            height: 30px;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: -1;
-        }
-    
-        &::after {
-            background: rgba(0,0,0,0.5);
-            content: '';
-            height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: -1;
-        }
-    
-    }
-    
-    .cards {
-        display: grid; 
-        gap: 38px;
-        grid-template-columns: repeat(1, 1fr); 
+  .card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    filter: grayscale(100);
+    flex-direction: column;
+    padding: 0 45px 45px;
+    position: relative;
+    width: 321px;
 
-        @include for-size('tablet') {
-            grid-template-columns: repeat(2, 1fr); 
-        }
-    }
-    
-    .address {
-        color: $white;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: normal;
-        letter-spacing: -0.07em;
-        line-height: 17px;
-        margin-top: 48px;
-
-
-        @include for-size('tablet') {
-            font-size: 22px;
-            line-height: 26px;
-        }
-    }
-    
-    .location {
-        color: $white;
-        font-family: Inter;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 103.49%;
-        text-transform: uppercase;
-
-        @include for-size('tablet') {
-            font-size: 54px;
-            line-height: 103.49%;
-        }
-    
-        & span {
-            display: block;
-        }
-    }
-    
-    .contact {
-        display: grid; 
-        gap: 0px 0px;
-        grid-template-columns: repeat(1, 1fr); 
-        margin-top: 0px;
-
-        @include for-size('tablet') {
-            grid-template-columns: repeat(2, 1fr);
-            margin-top: 32px;
-        }
-    
-        a {
-            color: $white;
-            font-family: Inter;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: normal;
-            line-height: 17px;
-        }
+    @include for-size('tablet') {
+      height: 100%;
+      padding: 0 50px 50px;
+      width: 589px;
     }
 
-    .social {
-        flex-grow: 1;
-        padding-bottom: 0px;
-        align-items: flex-end;
-        display: flex;
-        margin-top: 38px;
-
-        @include for-size('tablet') {
-            margin-top: 20px;
-            padding-bottom: 20px;
-        }
-
-        & > * {
-            margin-right: 18px;
-        }
-
-        img {
-            height: 33px;
-            
-            @include for-size('tablet') {
-                height: 20px;
-            }
-        }
+    &::before {
+      background: $black;
+      content: '';
+      height: 18px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
     }
+
+    &::after {
+      background: rgba(0,0,0,0.6);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  .cards {
+    display: grid;
+    gap: 38px;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include for-size('tablet') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .address {
+    color: $white;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.07em;
+    line-height: 17px;
+    margin-top: 48px;
+    margin-bottom: 5px;
+
+
+    @include for-size('tablet') {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 0;
+    }
+  }
+
+  .location {
+    color: $white;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 103.49%;
+    text-transform: uppercase;
+
+    @include for-size('tablet') {
+      font-size: 54px;
+      line-height: 103.49%;
+    }
+
+    & span {
+      display: block;
+    }
+  }
+
+  .contact {
+    display: grid;
+    gap: 0px 0px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 0px;
+
+    @include for-size('tablet') {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 32px;
+    }
+
+    a {
+      color: $white;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 17px;
+      margin-bottom: 5px;
+
+      @include for-size('tablet') {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .social {
+    flex-grow: 1;
+    padding-bottom: 0;
+    align-items: flex-end;
+    display: flex;
+    margin-top: 38px;
+
+    @include for-size('tablet') {
+      margin-top: 30px;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & > * {
+      margin-right: 30px;
+
+      @include for-size('tablet') {
+        margin-right: 20px;
+      }
+    }
+
+    img {
+      height: 30px;
+
+      @include for-size('tablet') {
+        height: 20px;
+      }
+    }
+  }
 }

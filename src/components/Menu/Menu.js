@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { parseNavMenus } from "contentful/utils";
@@ -11,11 +12,14 @@ const Menu = ({ navMenus, locale, isModalOpen }) => {
   const dispatch = useDispatch();
   const currentOffice = useSelector(selectCurrentOffice);
   const [cookies, setCookie] = useCookies(["office"]);
-
   const localizedCopy = getCopy(locale);
-
   const parsedMenuItems = parseNavMenus(navMenus);
   const router = useRouter();
+
+  useEffect(() => {
+    if (isModalOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'scroll';
+  }, [isModalOpen]);
 
   const setOffice = (officeId) => {
     dispatch(AppActions.setCurrentOffice(officeId));
