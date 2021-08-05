@@ -8,7 +8,8 @@ import rootReducer from "redux/reducers";
 let store;
 
 const initStore = (preloadedState) => {
-  const middlewares = [loggerMiddleware, thunkMiddleware];
+  let middlewares = [thunkMiddleware];
+  if (process.env.NODE_ENV !== 'production') middlewares = [loggerMiddleware, ...middlewares];
   const middlewareEnhancer = applyMiddleware(...middlewares);
   const enhancers = [middlewareEnhancer];
   const composedEnhancers = composeWithDevTools(...enhancers);
