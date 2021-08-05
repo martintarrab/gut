@@ -80,13 +80,13 @@
         font-style: normal;
         font-weight: normal;
         letter-spacing: -0.07em;
-        line-height: 200%;
+        line-height: 17px;
         margin-top: 48px;
 
 
         @include for-size('tablet') {
             font-size: 22px;
-            line-height: 140%;
+            line-height: 26px;
         }
     }
     
@@ -132,10 +132,15 @@
 
     .social {
         flex-grow: 1;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
         align-items: flex-end;
         display: flex;
-        margin-top: 20px;
+        margin-top: 38px;
+
+        @include for-size('tablet') {
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
 
         & > * {
             margin-right: 18px;
