@@ -29,6 +29,7 @@ const config = {
     threeImageLayout: "threeImageLayout",
     xRay: "xRay",
     press: "press",
+    offices: "offices"
   },
   breakpoints: {
     mobile: {

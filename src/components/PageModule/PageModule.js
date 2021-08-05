@@ -21,6 +21,7 @@ import TwoImageLayout from "components/TwoImageLayout";
 import ThreeImageLayout from "components/ThreeImageLayout";
 import XRay from "components/XRay";
 import Press from "components/Press";
+import Offices from "components/Offices";
 
 const PageModule = ({ moduleId, content, className, slideIdx, isSlide, nextSlide, locale }) => {
   const { pageModules } = config;
@@ -48,6 +49,7 @@ const PageModule = ({ moduleId, content, className, slideIdx, isSlide, nextSlide
     [pageModules.threeImageLayout]: ThreeImageLayout,
     [pageModules.xRay]: XRay,
     [pageModules.press]: Press,
+    [pageModules.offices]: Offices,
   }
   let Module = modules[moduleId];
 

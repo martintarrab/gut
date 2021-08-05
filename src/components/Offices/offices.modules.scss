@@ -1,0 +1,148 @@
+.offices {
+    display: flex;
+    flex-direction: column;
+    padding-top: 114px;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        display: none;
+        font-family: Inter;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: -0.07em;
+        line-height: 103.49%;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include for-size('tablet') {
+            display: block;
+        }
+    }
+    
+    .card {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+        display: flex;
+        filter: grayscale(100);
+        flex-direction: column;
+        padding: 0 53px 49px;
+        position: relative;
+        width: 321px;
+
+        @include for-size('tablet') {
+            height: 100%;
+            padding: 0 51px;
+            width: 589px;
+        }
+    
+        &::before {
+            background: $black;
+            content: '';
+            height: 30px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+    
+        &::after {
+            background: rgba(0,0,0,0.5);
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+    
+    }
+    
+    .cards {
+        display: grid; 
+        gap: 38px;
+        grid-template-columns: repeat(1, 1fr); 
+
+        @include for-size('tablet') {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+    
+    .address {
+        color: $white;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: -0.07em;
+        line-height: 200%;
+        margin-top: 48px;
+
+
+        @include for-size('tablet') {
+            font-size: 22px;
+            line-height: 140%;
+        }
+    }
+    
+    .location {
+        color: $white;
+        font-family: Inter;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 103.49%;
+        text-transform: uppercase;
+
+        @include for-size('tablet') {
+            font-size: 54px;
+            line-height: 103.49%;
+        }
+    
+        & span {
+            display: block;
+        }
+    }
+    
+    .contact {
+        display: grid; 
+        gap: 0px 0px;
+        grid-template-columns: repeat(1, 1fr); 
+        margin-top: 0px;
+
+        @include for-size('tablet') {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 32px;
+        }
+    
+        a {
+            color: $white;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 17px;
+        }
+    }
+
+    .social {
+        flex-grow: 1;
+        padding-bottom: 20px;
+        align-items: flex-end;
+        display: flex;
+        margin-top: 20px;
+
+        & > * {
+            margin-right: 18px;
+        }
+
+        img {
+            height: 20px;
+        }
+    }
+}
