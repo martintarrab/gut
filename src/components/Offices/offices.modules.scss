@@ -142,7 +142,11 @@
         }
 
         img {
-            height: 20px;
+            height: 33px;
+            
+            @include for-size('tablet') {
+                height: 20px;
+            }
         }
     }
 }

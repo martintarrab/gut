@@ -35,7 +35,7 @@ const Offices = ({content: {fields: { cards, title }}}) => {
                                     <Image src={facebook} alt="facebook" />
                                 </a>
                                 <a href="https://www.linkedin.com/company/gutagency" target="_blank">
-                                    <Image src={linkedin} alt="linkedin" s/>
+                                    <Image src={linkedin} alt="linkedin" />
                                 </a>
                             </div>
                         </div>
