@@ -41,9 +41,10 @@ const Work = ({ content, works, locale, navMenus, global, footer, clients }) => 
   }
   
   const getOptions = () => clients
-    .map((client) => ({ label: client.fields.title, value: client.fields.slug }))
     .filter((client) => !client.title)
-
+    .map((client) => ({ label: client.fields.title.trim(), value: client.fields.slug }))
+    .sort((a, b) => a.label.localeCompare(b.label))
+  
   useEffect(() => {
     storePageContent();
   }, [content, works, currentOffice])
