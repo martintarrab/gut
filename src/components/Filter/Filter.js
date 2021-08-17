@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Visible } from 'react-grid-system';
 
 const Filter = ({options, onChange, value}) => {
-  const [current, setCurrent] = useState('Filter by +');
+  const [current, setCurrent] = useState('Brand by +');
   const [openFilter, setOpenFllter] = useState(false);
 
   const handleChangeSelect = (event) => {
@@ -27,7 +27,7 @@ const Filter = ({options, onChange, value}) => {
       <Visible xs sm>
         <label className="label">
           <select value={value} className="select" onChange={handleChangeSelect}>
-            <option value={''}>Filter by +</option>
+            <option value={''}>Brand by +</option>
             {options.map((option) => (
                 <option key={option.value} value={option.value}>{option.label}</option>
             ))}
@@ -40,7 +40,7 @@ const Filter = ({options, onChange, value}) => {
           <div className="filter-modal__wrapper">
             <ul>
               {options.map((option) => (
-                <li key={option.value}><a onClick={handlerSetFilter} data-type={option.value}>{option.label}</a></li>
+                <li key={option.value}><a href={void(0)} onClick={handlerSetFilter} data-type={option.value}>{option.label}</a></li>
               ))}
             </ul>
           </div>
