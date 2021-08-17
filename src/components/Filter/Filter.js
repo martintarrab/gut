@@ -8,7 +8,6 @@ const Filter = ({options, onChange, value}) => {
   const handleChangeSelect = (event) => {
     const { value } =  event.target;
     onChange(value);
-    setCurrent(value.textContent);
   }
 
   const handlerFilterModal = () => {
@@ -36,7 +35,7 @@ const Filter = ({options, onChange, value}) => {
         </label>
       </Visible>
       <Visible md lg xl xxl>
-        <button onClick={handlerFilterModal}>{current} +</button>
+        <button onClick={handlerFilterModal}>{current}</button>
         <div className="filter-modal" onMouseLeave={handlerFilterModal}>
           <div className="filter-modal__wrapper">
             <ul>
