@@ -19,7 +19,6 @@ const Filter = ({options, onChange, value}) => {
     const current = event.target;
     const data = current.getAttribute('data-type');
 
-    setOpenFllter(false);
     onChange(data);
     setCurrent(current.textContent);
   }
@@ -37,7 +36,7 @@ const Filter = ({options, onChange, value}) => {
         </label>
       </Visible>
       <Visible md lg xl xxl>
-        <button onClick={handlerFilterModal}>{current}</button>
+        <button onClick={handlerFilterModal}>{current} +</button>
         <div className="filter-modal" onMouseLeave={handlerFilterModal}>
           <div className="filter-modal__wrapper">
             <ul>
