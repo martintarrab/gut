@@ -63,6 +63,11 @@
 
       li {
         text-align: right;
+        padding-bottom: 5px;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
 
         a {
           cursor: pointer;
