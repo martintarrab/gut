@@ -61,7 +61,7 @@ const HeroVideo = ({ content, className, slideIdx, isSlide = false, nextSlide = 
 
   return (
     <div className="keen-slider__slide">
-      <Link href={`/portfolio/${fields.slug}`}>
+      <Link href={`/work/${fields.slug}`}>
         <div className={`hero-video ${inView ? 'hero-video--load' : ''}`}>
           <div className="hero-video__wrapper" ref={ref}>
             <div className="hero-video__wrapper-eyebrow">

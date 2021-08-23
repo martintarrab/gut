@@ -33,7 +33,7 @@ const HeroDetail = ({ content }) => {
       <div className="hero-detail__header">
         <div className="hero-detail__header-wrapper">
           <Link href="/work">
-            <a className="hero-detail__header-back">{back} Works</a>
+            <a className="hero-detail__header-back">{back} Work</a>
           </Link>
           <h1 className="hero-detail__header-title">{fields.title}</h1>
         </div>

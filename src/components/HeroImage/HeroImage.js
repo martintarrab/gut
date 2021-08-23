@@ -12,7 +12,7 @@ const HeroImage = ({ content }) => {
 
   return (
     <div className="keen-slider__slide">
-      <Link href={`/portfolio/${fields.slug}`}>
+      <Link href={`/work/${fields.slug}`}>
         <div className={`hero-image ${inView ? 'hero-image--load' : ''}`}>
           <div className="hero-image__wrapper" ref={ref}>
             <div className="hero-image__wrapper-eyebrow">

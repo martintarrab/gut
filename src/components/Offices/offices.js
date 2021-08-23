@@ -1,17 +1,18 @@
 import { extractMediaAssetSrc } from "contentful/utils";
 import Image from 'next/image'
-import instagram from './assets/instagram.png';
-import twitter from './assets/twitter.png';
-import facebook from './assets/facebook.png';
-import linkedin from './assets/linkedin.png';
+import instagramIcon from './assets/instagram.png';
+import twitterIcon from './assets/twitter.png';
+import facebookIcon from './assets/facebook.png';
+import linkedinIcon from './assets/linkedin.png';
 
 const Offices = ({content: {fields: { cards, title }}}) => {
     return (
         <div className="offices">
             <h1 className="title">{title}</h1>
             <div className="cards">
-                {cards.map((card) => { 
-                    const { fields: { id, address, officeName, emails=[], image }} = card;
+                {cards.map((card) => {
+                    const { fields: { id, address, officeName, emails=[], image, instagram, linkedin, twitter, facebook }} = card;
+
                     return (
                         <div key={id} className="card" style={{backgroundImage: `url(${extractMediaAssetSrc(image)}`}}>
                             <div className="location">
@@ -25,18 +26,18 @@ const Offices = ({content: {fields: { cards, title }}}) => {
                                 {emails.map((email) => <a key={email} href={`mailto:${email}`}>{email}</a>)}
                             </div>
                             <div className="social">
-                                <a href="https://www.instagram.com/gutbuenosaires/" target="_blank">
-                                    <Image src={instagram} alt="instagram" />
-                                </a>
-                                <a href="https://twitter.com/gutbuenosaires" target="_blank">
-                                    <Image src={twitter} alt="twitter" />
-                                </a>
-                                <a href="https://www.facebook.com/gutbuenosaires" target="_blank">
-                                    <Image src={facebook} alt="facebook" />
-                                </a>
-                                <a href="https://www.linkedin.com/company/gutagency" target="_blank">
-                                    <Image src={linkedin} alt="linkedin" />
-                                </a>
+                                {instagram && <a href={instagram} target="_blank">
+                                    <Image src={instagramIcon} alt="instagram" />
+                                </a>}
+                                {twitter && <a href={twitter} target="_blank">
+                                    <Image src={twitterIcon} alt="twitter" />
+                                </a>}
+                                {facebook && <a href={facebook} target="_blank">
+                                    <Image src={facebookIcon} alt="facebook" />
+                                </a>}
+                                {linkedin && <a href={linkedin} target="_blank">
+                                    <Image src={linkedinIcon} alt="linkedin" />
+                                </a>}
                             </div>
                         </div>
                     )
