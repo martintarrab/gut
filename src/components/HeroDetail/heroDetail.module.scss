@@ -93,6 +93,8 @@
 
   &__video {
     position: relative;
+    max-width: 900px;
+    margin: 0 auto;
 
     &-image {
       position: relative;

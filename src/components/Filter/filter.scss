@@ -2,6 +2,8 @@
   position: relative;
   align-items: center;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
   .select, .label {
     color: white;
@@ -14,6 +16,12 @@
 
   .label {
     display: flex;
+    text-align: right;
+    padding-right: 29px;
+
+    @include for-size('tablet') {
+      padding-right: 0;
+    }
   }
 
   .select {
