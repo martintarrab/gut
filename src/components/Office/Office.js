@@ -46,11 +46,11 @@ const Office = ({ content, locale }) => {
           </div>
           <h1 className="office__wrapper-data-title">{fields.officeName}</h1>
           <p className="office__wrapper-data-address">{fields.address}</p>
-          <div className="office__wrapper-data-emails">
+          {fields.emails && <div className="office__wrapper-data-emails">
             {fields.emails.map((email, idx) => (
               <div className="office__wrapper-data-emails-item" key={idx}><a href={`mailto:${email}`}>{email}</a></div>
             ))}
-          </div>
+          </div>}
           <ul className="office__wrapper-data-social">
             {fields.instagram && <li><a href={fields.instagram} target="_blank" aria-label="Visit us on Instagram">{instagram}</a></li>}
             {fields.twitter && <li><a href={fields.twitter} target="_blank" aria-label="Visit us on Twitter">{twitter}</a></li>}
