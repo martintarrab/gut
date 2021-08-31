@@ -21,6 +21,8 @@
 
     @include for-size('tablet') {
       padding-right: 0;
+      position: relative;
+      z-index: 2;
     }
   }
 
@@ -63,21 +65,32 @@
       height: 100%;
       overflow: hidden;
       overflow-y: auto;
-      padding: 0 35px;
 
       ul {
         list-style: none;
+        padding: 0;
       }
 
       li {
         text-align: right;
-        padding-bottom: 5px;
+        width: 100%;
+        box-sizing: border-box;
+
+        &:hover {
+          background: #fff;
+
+          a {
+            color: #000;
+          }
+        }
 
         &:last-child {
           padding-bottom: 0;
         }
 
         a {
+          padding: 5px 35px;
+          display: block;
           cursor: pointer;
         }
       }
