@@ -39,8 +39,8 @@ const HeroDetail = ({ content }) => {
         </div>
       </div>
       {!fields.video && <div className="hero-detail__image">
-        <img src={extractMediaAssetSrc(fields.imageDesktop)} alt="" className="lg" />
-        <img src={extractMediaAssetSrc(fields.imageMobile)} alt="" className="sm" />
+        {fields.imageDesktop && <img src={extractMediaAssetSrc(fields.imageDesktop)} alt="" className="lg" />}
+        {fields.imageMobile && <img src={extractMediaAssetSrc(fields.imageMobile)} alt="" className="sm" />}
       </div>}
       {fields.video &&
         <div className={`hero-detail__video ${isPlaying ? 'hero-detail__video--show' : ''}`}>
@@ -53,8 +53,8 @@ const HeroDetail = ({ content }) => {
                 <span>Play<br />video</span>
               </div>
             </div>
-            <img src={extractMediaAssetSrc(fields.imageDesktop)} alt="" className="lg" />
-            <img src={extractMediaAssetSrc(fields.imageMobile)} alt="" className="sm" />
+            {fields.imageDesktop && <img src={extractMediaAssetSrc(fields.imageDesktop)} alt="" className="lg" />}
+            {fields.imageMobile && <img src={extractMediaAssetSrc(fields.imageMobile)} alt="" className="sm" />}
           </div>
           <div className="hero-detail__video-player">
             <ReactPlayer
@@ -98,12 +98,12 @@ const HeroDetail = ({ content }) => {
             <span key={index}>{tag}</span>
           )}
         </div>
-        <div className="hero-detail__data-brands">
+        {fields.brands && <div className="hero-detail__data-brands">
           <h3>Brand / Partners</h3>
           {fields.brands.map((img, index) =>
             <img key={index} src={img.fields.file.url} alt="" />
           )}
-        </div>
+        </div>}
       </div>
     </section>
   )
