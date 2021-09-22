@@ -15,7 +15,7 @@ const Footer = ({ locale, content }) => {
 
   return (
     <>
-    {showElement() && 
+    {showElement() &&
       <footer className="ft">
         <div className="ft__content">
           <div className="ft__content-top">

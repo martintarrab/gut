@@ -57,11 +57,11 @@ const Nav = ({ navMenus, locale }) => {
       <div className="hd__content-nav-list" onMouseEnter={() => setShowItems(true)} onMouseLeave={() => setShowItems(false)}>
         <div className="hd__content-nav-list-title"><a>{localizedCopy.office}</a></div>
         <div className={`hd__content-nav-list-item ${showItems ? 'hd__content-nav-list-item--show' : ''}`}>
-          <a className={currentOffice == 'ba' ? 'active' : ''} onClick={() => { setOffice('ba') }}><span>{mapOffice['BA']}</span></a>
-          <a className={currentOffice == 'sp' ? 'active' : ''} onClick={() => { setOffice('sp') }}><span>{mapOffice['SP']}</span></a>
-          <a className={currentOffice == 'mia' ? 'active' : ''} onClick={() => { setOffice('mia') }}><span>{mapOffice['MIA']}</span></a>
-          <a className={currentOffice == 'tor' ? 'active' : ''} onClick={() => { setOffice('tor') }}><span>{mapOffice['TOR']}</span></a>
-          <a className={currentOffice == 'mx' ? 'active' : ''} onClick={() => { setOffice('mx') }}><span>{mapOffice['MEX']}</span></a>
+          <a className={currentOffice == 'ba' ? 'active' : ''} onClick={() => { setOffice('ba'); router.push('/'); }}><span>{mapOffice['BA']}</span></a>
+          <a className={currentOffice == 'sp' ? 'active' : ''} onClick={() => { setOffice('sp'); router.push('/'); }}><span>{mapOffice['SP']}</span></a>
+          <a className={currentOffice == 'mia' ? 'active' : ''} onClick={() => { setOffice('mia'); router.push('/'); }}><span>{mapOffice['MIA']}</span></a>
+          <a className={currentOffice == 'tor' ? 'active' : ''} onClick={() => { setOffice('tor'); router.push('/'); }}><span>{mapOffice['TOR']}</span></a>
+          <a className={currentOffice == 'mx' ? 'active' : ''} onClick={() => { setOffice('mx'); router.push('/'); }}><span>{mapOffice['MEX']}</span></a>
         </div>
       </div>
       {renderMenuItems(parsedMenuItems)}
