@@ -11,10 +11,9 @@ const ClientHero = ({ eyebrow, title }) => {
         <div className="client-hero__who">
           <p>{eyebrow}</p>
         </div>
-        <div className="client-hero-content">
-          {/* {documentToReactComponents(fields.description)} */}
-          <p>GUT is an independent creative agency founded by Anselmo Ramos and Gaston Bigio in 2018, with offices in Miami, São Paulo and Buenos Aires.</p>
-        </div>
+        {title && <div className="client-hero-content">
+          <p>{title}</p>
+        </div>}
       </div>
     </section>
   )

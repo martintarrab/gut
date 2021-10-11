@@ -27,7 +27,7 @@ const Footer = ({ locale, content }) => {
               {fields?.linkedin && <li><a href={fields?.linkedin} target="_blank" rel="noreferrer">Linkedin</a></li>}
             </ul>
             <div className="ft__content-top-office">
-              <p>{fields.title} Office</p>
+              <p>GUT {fields.title}</p>
             </div>
             <div className="ft__content-top-address">
               {fields.address && <p>{fields.address}</p>}

@@ -23,7 +23,7 @@ export const isContentFromCurrentOffice = (content, officeId) => {
 }
 
 export const extractMediaAssetSrc = (imgField) => {
-  return imgField.fields.file.url;
+  return imgField?.fields?.file.url;
 }
 
 
