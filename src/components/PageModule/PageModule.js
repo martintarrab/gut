@@ -24,36 +24,36 @@ import Press from "components/Press";
 import Offices from "components/Offices";
 
 const PageModule = ({ moduleId, content, className, slideIdx, isSlide, nextSlide, locale }) => {
-  const { pageModules } = config;
+	const { pageModules } = config;
 
-  const modules = {
-    [pageModules.heroAbout]: HeroAbout,
-    [pageModules.heroDetail]: HeroDetail,
-    [pageModules.heroImage]: HeroImage,
-    [pageModules.heroVideo]: HeroVideo,
-    [pageModules.heroQuote]: HeroQuote,
-    [pageModules.heroMeet]: HeroMeet,
-    [pageModules.heroCulture]: HeroCulture,
-    [pageModules.heroLegal]: HeroLegal,
-    [pageModules.heroContact]: HeroContact,
-    [pageModules.quote]: Quote,
-    [pageModules.people]: People,
-    [pageModules.office]: Office,
-    [pageModules.team]: Team,
-    [pageModules.text]: Text,
-    [pageModules.tab]: Tab,
-    [pageModules.initiative]: Initiative,
-    [pageModules.careers]: Careers,
-    [pageModules.oneImageLayout]: OneImageLayout,
-    [pageModules.twoImageLayout]: TwoImageLayout,
-    [pageModules.threeImageLayout]: ThreeImageLayout,
-    [pageModules.xRay]: XRay,
-    [pageModules.press]: Press,
-    [pageModules.offices]: Offices,
-  }
-  let Module = modules[moduleId];
+	const modules = {
+		[pageModules.heroAbout]: HeroAbout,
+		[pageModules.heroDetail]: HeroDetail,
+		[pageModules.heroImage]: HeroImage,
+		[pageModules.heroVideo]: HeroVideo,
+		[pageModules.heroQuote]: HeroQuote,
+		[pageModules.heroMeet]: HeroMeet,
+		[pageModules.heroCulture]: HeroCulture,
+		[pageModules.heroLegal]: HeroLegal,
+		[pageModules.heroContact]: HeroContact,
+		[pageModules.quote]: Quote,
+		[pageModules.people]: People,
+		[pageModules.office]: Office,
+		[pageModules.team]: Team,
+		[pageModules.text]: Text,
+		[pageModules.tab]: Tab,
+		[pageModules.initiative]: Initiative,
+		[pageModules.careers]: Careers,
+		[pageModules.oneImageLayout]: OneImageLayout,
+		[pageModules.twoImageLayout]: TwoImageLayout,
+		[pageModules.threeImageLayout]: ThreeImageLayout,
+		[pageModules.xRay]: XRay,
+		[pageModules.press]: Press,
+		[pageModules.offices]: Offices,
+	}
+	let Module = modules[moduleId];
 
-  return Module ? <Module className={className} content={content} slideIdx={slideIdx} isSlide={isSlide} nextSlide={nextSlide} locale={locale} /> : <></>
+	return Module ? <Module className={className} content={content} slideIdx={slideIdx} isSlide={isSlide} nextSlide={nextSlide} locale={locale} /> : <></>
 }
 
 
